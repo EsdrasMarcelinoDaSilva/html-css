@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercico 21.1º</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav{
+            background-color: rgb(87, 84, 84);
+            padding: 3px;
+            box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.432);
+        }
+        h1{
+
+        }
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        nav > a:hover{
+            text-decoration: underline;
+        }
+        article{
+            background-color: lightgray;
+            padding: 5px;
+            border-radius: 7px;
+        }
+        article > aside{
+            background-color: rgb(161, 159, 159);
+            text-align: center;
+        }
+        article#ita{
+            margin-top: 7px;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 7px;
+            box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.384);
+        }
+        footer{
+            background-color: black;
+            text-align: center;
+            color: white;
+            padding: 4px;
+            margin: 0px;
+        }
+        footer > p{
+            margin: 0px;
+        }
+        div#bola{
+            height: 200px;
+            width: 200px;
+            margin: 20px;
+            background-color: burlywood;
+            border-radius: 50%;
+        }
+         h1 > div#bola{
+             text-align: justify;
+         } 
+    </style>
+</head>
+<body><!--GROUPING TAGS-->
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Tecnologia Programação Inteligencia Artificial </p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Noticias Aleatorias</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, minus ut harum odio, at possimus pariatur aspernatur alias eaque natus itaque veritatis officia iste autem fugit in porro obcaecati eligendi?</p>
+                <aside>
+                    <p>Artigo escrito por Esdras Silva</p>
+                </aside>
+            </article>
+            <article id="ita">
+                <h2>Inteligencia Artificial</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam libero corporis quia ex quasi veritatis necessitatibus explicabo quaerat consequatur dolorem accusantium, at beatae, tempora alias deleniti nisi quidem? Temporibus, id.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Esdras Marcelino da silva</p>
+    </footer>
+    <div id="bola">
+        <h1>&#x1F47D;</h1>
+    </div>
+</body>
+</html>

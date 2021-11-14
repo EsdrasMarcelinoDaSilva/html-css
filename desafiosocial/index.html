@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="family.ico" type="image/x-icon">
+    <style>
+        body {
+    background-image: url("foto-mar01.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+h1, h2, h3{
+    color: whitesmoke;
+}
+h1{
+    text-align: center;
+}
+li#itwt, li#imf{
+    color: whitesmoke;
+    list-style: none;
+}
+p {
+    border-bottom: solid hsl(66, 88%, 52%);
+    color:white;
+    width: 63%;       
+}
+#playlist{
+    list-style: none;
+}
+#playlist li, a{
+    text-decoration: none;
+}
+#playlist.sucesso a{
+    color: blue;
+}
+    </style>
+    <title>Rede Social</title>
+</head>
+<body>
+    <h1>Minhas Redes Sociais</h1>
+    <h2>Essa é a minha Rede Social</h2>
+    <img src="family01.png">
+    <h2>Quer Falar com eu?</h2>
+    <ul>
+        <li id="itwt"><img src="icone-twitter.png"    alt="imagem-twitter"><a href="https://twitter.com/EsdrasMarcelin" target="_blank">/EsdrasMarcelino</a> - Me segue la Abestado, NU TUITI
+        <li id="imf"><img src="icone-facebook.png" alt="imagem-facebook"><a href="https://facebook.com/EsdrasMarcelinoDaSilva" target="_blank">/EsdrasMarcelinoDaSilva</a>
+    </ul>
+    <audio src="audios/mix-esdras.mp3" id="audioplayer" controls></audio>
+    <ul id="playlist">
+        <li class="sucesso"><a href="audios/mix-esdras.mp3">instrumental- 2pa & Big</a></li>
+        <li><a href="audios/mix01-esdras.mp3">Mirros-Justin T</a></li>
+        <li><a href="audios/mix02-esdras.mp3">what comes around</a></li>
+    </ul>
+    <script src="../javascript/funcoes.js"></script>
+    <script>
+        audioPlayer();
+        function audioplayer(){
+            var sucesso = 0;
+            $("#audioplayer")[0].src = $("#playlist li a")[0];
+            $("#audioPlayer")[0].play();
+            $("#playlist li a").click(function(e){
+                e.preventDefault();
+                $("#audioplayer")[0].src = this;
+                $("#audioplayer")[0].play();
+                $("#playlist li").removeClass("sucesso");
+                sucesso = $(this).parent().index();
+                $(this).parent().addClass("sucesso");
+            });
+            $("#audioplayer")[0].addEventListener("ended", function(){
+                sucesso++;
+                 if(sucesso == $("#playlist li a").length)
+                    sucesso = 0;
+                 $("#playlist li").removeClass("sucesso");
+                 $("#playlist li:eq("+sucesso+")").addClass("sucesso");
+                 $("#audioplayer")[0].src = $("#playlist li a")[sucesso].href;
+                 $("#audioplayer")[0].play();
+            });
+        }
+    </script>
+    <h3>Escuta um Som ai Abestado &uarr;</h3>
+    <p>Se nao tocar infelizmente seu navegador nao é compativel</p>      
+</body>
+</html>

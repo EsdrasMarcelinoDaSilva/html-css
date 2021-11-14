@@ -1,0 +1,25 @@
+body{
+    background-color: burlywood;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: rgb(66, 38, 2);
+}
+h2{
+    color: darkgoldenrod;
+}
+h1#principal{
+    text-align: center;
+    background-color: rgb(248, 247, 237);
+}
+/*tudo em html de id em css é = #
+tudo em html de class em css é = .*/
+.basico{
+    color: rgb(247, 241, 158);
+}
+.avançado{
+    color: rgb(107, 89, 40);
+}
+.destaque{
+    background-color: darksalmon;
+}
